@@ -7,10 +7,10 @@ Deno.test("one", () => {
   // assertEquals(url.href, "https://deno.land/foo.js");
   assertEquals(one(testInput1), 24000);
 });
- 
-Deno.test('two', () => {
+
+Deno.test("two", () => {
   assertEquals(two(testInput1), 45000);
-})
+});
 
 const testInput1 = `1000
 2000
@@ -26,4 +26,4 @@ const testInput1 = `1000
 9000
 
 10000
-`
+`;

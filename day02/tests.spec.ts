@@ -3,13 +3,14 @@ import { one } from "./one.ts";
 import { two } from "./two.ts";
 
 Deno.test("one", () => {
-  assertEquals(one(testInput1), undefined);
+  assertEquals(one(testInput1), 15);
 });
 
 Deno.test("two", () => {
-  assertEquals(two(testInput1), undefined);
+  assertEquals(two(testInput1), 12);
 });
 
-const testInput1 = `1
-2
+const testInput1 = `A Y
+B X
+C Z
 `;

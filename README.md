@@ -11,7 +11,7 @@ DISCLAIMER: I'm a Deno beginner, but experimented with JavaScript and TypeScript
 | Day | Part 1 | Part 2 |
 | --- | ------ | ------ |
 | 1   | 🦕✅   | 🦕✅   |
-| 2   | 🕕     | 🕕     |
+| 2   | 🦕✅   | 🦕✅   |
 | 3   | 🕕     | 🕕     |
 | 4   | 🕕     | 🕕     |
 | 5   | 🕕     | 🕕     |

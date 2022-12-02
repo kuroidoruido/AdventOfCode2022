@@ -1,7 +1,7 @@
 {
-    "tasks": {
-        "start": "deno run --allow-run --allow-env ./tasks/start.ts",
-        "test": "deno run --allow-run --allow-env ./tasks/test.ts",
-        "setup": "deno run --allow-read --allow-write --allow-net --allow-env ./tasks/setup.ts"
-    }
+  "tasks": {
+    "start": "deno run --allow-run --allow-env ./tasks/start.ts",
+    "test": "deno run --allow-run --allow-env ./tasks/test.ts",
+    "setup": "deno run --allow-read --allow-write --allow-net --allow-env ./tasks/setup.ts"
+  }
 }
