@@ -9,7 +9,7 @@ import {
 
 export function two(input: string) {
   const parsed = parse(input);
-  return parsed.turns.map(turnToScore).reduce(sumAll());
+  return parsed.turns.map(turnToScore).reduce(sumAll);
 }
 
 function turnToScore(turn: Turn): number {

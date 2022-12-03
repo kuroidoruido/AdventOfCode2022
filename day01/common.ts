@@ -16,7 +16,7 @@ export function parse(input: string): ParsedInput {
     if (line === "") {
       parsed.elfs.push({
         items: currentElf,
-        total: currentElf.reduce(...sumAll()),
+        total: currentElf.reduce(sumAll),
       });
       currentElf = [];
     } else {

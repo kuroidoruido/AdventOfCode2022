@@ -6,5 +6,5 @@ export function two(input: string) {
   const parsed = parse(input);
   const allElfs = parsed.elfs.map(({ total }) => total);
   allElfs.sort(sortDesc(numberSort));
-  return allElfs.slice(0, 3).reduce(sumAll());
+  return allElfs.slice(0, 3).reduce(sumAll);
 }

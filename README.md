@@ -12,7 +12,7 @@ DISCLAIMER: I'm a Deno beginner, but experimented with JavaScript and TypeScript
 | --- | ------ | ------ |
 | 1   | 🦕✅   | 🦕✅   |
 | 2   | 🦕✅   | 🦕✅   |
-| 3   | 🕕     | 🕕     |
+| 3   | 🦕✅   | 🦕✅   |
 | 4   | 🕕     | 🕕     |
 | 5   | 🕕     | 🕕     |
 | 6   | 🕕     | 🕕     |

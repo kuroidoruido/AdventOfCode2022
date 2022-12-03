@@ -3,7 +3,7 @@ import { parse, result, resultScore, shapeScore, Turn } from "./common.ts";
 
 export function one(input: string) {
   const parsed = parse(input);
-  return parsed.turns.map(turnToScore).reduce(sumAll());
+  return parsed.turns.map(turnToScore).reduce(sumAll);
 }
 
 function turnToScore(turn: Turn): number {
