@@ -1,4 +1,4 @@
-import { isDefinedAndNotEmpty } from "../../lib/fp.ts";
+import { isDefinedAndNotEmpty } from "../lib/fp.ts";
 
 export interface ParsedInput {
   lines: string[];

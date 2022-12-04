@@ -22,14 +22,11 @@ const day = (() => {
 console.log("config", { day });
 
 Deno.mkdirSync(`./day${day}`);
-for (const file of Deno.readDirSync("./tasks/day-template")) {
-  Deno.copyFileSync(
-    `./tasks/day-template/${file.name}`,
-    `./day${day}/${file.name}`,
-  );
+for (const file of Deno.readDirSync("./day-template")) {
+  Deno.copyFileSync(`./day-template/${file.name}`, `./day${day}/${file.name}`);
 }
 const encoder = new TextEncoder();
 Deno.writeFileSync(
   `./day${day}/input1.txt`,
-  encoder.encode(await getInputFile(parseInt(day))),
+  encoder.encode(await getInputFile(parseInt(day)))
 );
