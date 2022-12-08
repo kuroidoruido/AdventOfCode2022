@@ -19,7 +19,7 @@ DISCLAIMER: I'm a Deno beginner, but experimented with JavaScript and TypeScript
 | 5   | 🦕✅ (QNNTGTPFN) | 🦕✅ (GGNPJBTTR) |
 | 6   | 🦕✅ (1779)      | 🦕✅ (2635)      |
 | 7   | 🦕✅ (1491614)   | 🦕✅ (6400111)   |
-| 8   | 🕕               | 🕕               |
+| 8   | 🦕✅ (1803)      | 🦕✅ (268912)    |
 | 9   | 🕕               | 🕕               |
 | 10  | 🕕               | 🕕               |
 | 11  | 🕕               | 🕕               |

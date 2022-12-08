@@ -29,3 +29,32 @@ export function uniq<T>(uniqItems: T[], current: T): T[] {
 export function findCommonItems<T>(one: T[], two: T[]): T[] {
   return one.filter((item) => two.includes(item));
 }
+
+export function takeWhile<T>(
+  condition: (acc: T[], current: T) => boolean
+): (acc: T[], current: T) => T[] {
+  let continueToTake = true;
+  return (acc: T[], current: T) => {
+    if (continueToTake && condition(acc, current)) {
+      return [...acc, current];
+    } else {
+      continueToTake = false;
+      return acc;
+    }
+  };
+}
+
+export function takeUntil<T>(
+  condition: (acc: T[], current: T) => boolean
+): (acc: T[], current: T) => T[] {
+  let continueToTake = true;
+  return (acc: T[], current: T) => {
+    if (!continueToTake) {
+      return acc;
+    }
+    if (condition(acc, current)) {
+      continueToTake = false;
+    }
+    return [...acc, current];
+  };
+}
