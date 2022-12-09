@@ -1,3 +1,5 @@
+import { isDefined } from "./fp.ts";
+
 export function sortDesc<T>(sorter: (a: T, b: T) => number) {
   return (a: T, b: T) => -sorter(a, b);
 }
@@ -57,4 +59,13 @@ export function takeUntil<T>(
     }
     return [...acc, current];
   };
+}
+
+export function newArray<T = null>(length: number, fill?: T): T[] {
+  const array = new Array(length).fill(null);
+  if (isDefined(fill)) {
+    return array.map(() => fill);
+  } else {
+    return array;
+  }
 }
