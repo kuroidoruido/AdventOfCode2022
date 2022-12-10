@@ -111,3 +111,31 @@ export function moveRope(moves: Move[], knotCount: number): [number, number][] {
   }
   return tailTrace.asArray();
 }
+
+export function printTrace(trace: [number, number][]) {
+  let matrixHorizontalMin = 0;
+  let matrixHorizontalMax = 0;
+  let matrixVerticalMin = 0;
+  let matrixVerticalMax = 0;
+  trace.forEach(([vertical, horizontal]) => {
+    matrixHorizontalMin = Math.min(matrixHorizontalMin, horizontal);
+    matrixHorizontalMax = Math.max(matrixHorizontalMax, horizontal);
+    matrixVerticalMin = Math.min(matrixVerticalMin, vertical);
+    matrixVerticalMax = Math.max(matrixVerticalMax, vertical);
+  });
+  const horizontalCenter =
+    Math.max(Math.abs(matrixHorizontalMin), Math.abs(matrixHorizontalMax)) + 1;
+  const verticalCenter =
+    Math.max(Math.abs(matrixVerticalMin), Math.abs(matrixVerticalMax)) + 1;
+  const matrixRow = new Array(horizontalCenter * 2 - 1).fill(".");
+  const matrix = new Array(verticalCenter * 2 - 1)
+    .fill(null)
+    .map(() => [...matrixRow]);
+  trace.forEach(
+    ([v, h]) => (matrix[v + verticalCenter][h + horizontalCenter] = "#")
+  );
+  console.log(
+    `from [${matrixVerticalMin},${matrixHorizontalMin}] to [${matrixVerticalMax},${matrixHorizontalMax}]`
+  );
+  matrix.forEach((row) => console.log(row.join("")));
+}
