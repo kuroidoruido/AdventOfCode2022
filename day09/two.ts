@@ -1,4 +1,4 @@
-import { moveRope, parse } from "./common.ts";
+import { moveRope, parse /*, printTrace*/ } from "./common.ts";
 
 export function two(input: string) {
   const parsed = parse(input);

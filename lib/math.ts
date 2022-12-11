@@ -21,3 +21,17 @@ export function maxAll(max: number, current: number): number {
     return current;
   }
 }
+
+export function maxAllN(count: number) {
+  return (max: number[], current: number): number[] => {
+    if (max.length < count) {
+      max.push(current);
+    } else {
+      const min = max.reduce(minAll);
+      if (min < current) {
+        max[max.lastIndexOf(min)] = current;
+      }
+    }
+    return max;
+  };
+}
