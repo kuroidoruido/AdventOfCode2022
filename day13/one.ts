@@ -4,7 +4,7 @@ import { isPairInRightOrder, parse } from "./common.ts";
 
 export function one(input: string) {
   const parsed = parse(input);
-  return parsed.packets
+  const allRights = parsed.packets
     .map(([left, right], index) => {
       console.log(
         index + 1,
@@ -17,18 +17,13 @@ export function one(input: string) {
       );
       const comp = isPairInRightOrder(left, right, 1);
       console.log(" => ", comp);
-      if (comp === "RIGHT") {
+      if (comp === "RIGHT" || comp === "SAME") {
         return index + 1;
       } else {
         return undefined;
       }
     })
-    .filter(isDefined)
-    .reduce((_, __, i, arr) => {
-      if (i === 0) {
-        console.log("all", arr, arr.length);
-      }
-      return arr;
-    }, [] as number[])
-    .reduce(sumAll, 0);
+    .filter(isDefined);
+  console.log("all", allRights, allRights.length);
+  return allRights.reduce(sumAll, 0);
 }
