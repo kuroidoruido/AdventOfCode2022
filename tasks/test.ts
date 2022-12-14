@@ -20,7 +20,7 @@ const day = (() => {
 console.log("config", { day });
 
 const process = Deno.run({
-  cmd: ["deno", "test", ".", "../lib"],
+  cmd: ["deno", "test", "--allow-read", ".", "../lib"],
   cwd: `${Deno.env.get("PWD")}/day${day}`,
   stdout: "piped",
   stderr: "piped",

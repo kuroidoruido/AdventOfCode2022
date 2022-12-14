@@ -6,17 +6,7 @@ export function one(input: string) {
   const parsed = parse(input);
   const allRights = parsed.packets
     .map(([left, right], index) => {
-      console.log(
-        index + 1,
-        " =>",
-        JSON.stringify(left),
-        "   ",
-        JSON.stringify(right)
-        // " => ",
-        // comp
-      );
-      const comp = isPairInRightOrder(left, right, 1);
-      console.log(" => ", comp);
+      const comp = isPairInRightOrder(left, right);
       if (comp === "RIGHT" || comp === "SAME") {
         return index + 1;
       } else {
@@ -24,6 +14,5 @@ export function one(input: string) {
       }
     })
     .filter(isDefined);
-  console.log("all", allRights, allRights.length);
   return allRights.reduce(sumAll, 0);
 }
