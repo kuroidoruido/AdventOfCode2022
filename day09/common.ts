@@ -95,7 +95,7 @@ export function bringCloser(
 export function moveRope(moves: Move[], knotCount: number): [number, number][] {
   const tailTrace: MySet<[number, number]> = new MySet(positionComparator);
   const pending = [...moves];
-  const knots: [number, number][] = newArray(knotCount, [0, 0]);
+  const knots: [number, number][] = newArray(knotCount, () => [0, 0]);
   const tailIndex = knots.length - 1;
   tailTrace.push(knots[tailIndex]);
 

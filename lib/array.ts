@@ -61,10 +61,10 @@ export function takeUntil<T>(
   };
 }
 
-export function newArray<T = null>(length: number, fill?: T): T[] {
+export function newArray<T = null>(length: number, fill?: () => T): T[] {
   const array = new Array(length).fill(null);
   if (isDefined(fill)) {
-    return array.map(() => fill);
+    return array.map(fill);
   } else {
     return array;
   }
